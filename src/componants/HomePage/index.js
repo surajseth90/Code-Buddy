@@ -21,6 +21,7 @@ function Home() {
             setRoomId(e.target.value);
           }}
           placeholder="Enter an id to join"
+          required
         />
         <input
           className="user-name"
@@ -29,10 +30,13 @@ function Home() {
             setUserName(e.target.value);
           }}
           placeholder="Enter your name"
+          required
         />
         <div className="homepage-btn-container">
-          <button className="homepage-btn">Join</button>
-          <button className="homepage-btn" onClick={generateRoomId}>Create Room</button>
+          <button className="homepage-btn" type="submit">Join</button>
+          <button className="homepage-btn" onClick={generateRoomId}>
+            Create Room
+          </button>
         </div>
       </div>
     </div>
